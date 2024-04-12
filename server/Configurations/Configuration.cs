@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Configurations
 {
-    internal class Configuration
+    public static class Configuration
     {
+        public static IServiceCollection AddConfigurations(this IServiceCollection services)
+        {
+            services.AddServices();
+            // services.AddValidator();
+            return services;
+        }
     }
 }

@@ -10,8 +10,8 @@ namespace Model.Schema
     {
         public RedirectNoti Redirect { get; set; } = RedirectNoti.None;
         public string Description { get; set; } = string.Empty;
-        public DateTime? CreatedAt { get; set; } = DateTime.Now;
-        public string Target {  get; set; } = string.Empty;
+        public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
+        public string Target { get; set; } = string.Empty;
 
         public virtual required User User { get; set; }
 

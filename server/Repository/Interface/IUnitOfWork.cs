@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model.Schema;
 
-namespace Repository.Interface
+namespace Repository
 {
-    internal class IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
+        IGenericRepository<Chat> ChatRepository { get; }
+        IGenericRepository<ChatMember> ChatMemberRepository { get; }
+        IGenericRepository<Comment> CommentRepository { get; }
+        IGenericRepository<Like> LikeRepository { get; }
+        IGenericRepository<Media> MediaRepository { get; }
+        IGenericRepository<Message> MessageRepository { get; }
+        IGenericRepository<Notification> NotificationRepository { get; }
+        IGenericRepository<Post> PostRepository { get; }
+        IGenericRepository<RelationShip> RelationShipRepository { get; }
+        IGenericRepository<User> UserRepository { get; }
+        Task Save();
     }
 }

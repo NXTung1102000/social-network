@@ -9,7 +9,7 @@ namespace Model.Schema
     {
         public required string DisplayName { get; set; }
         public string LastMessage { get; set; } = string.Empty;
-        public DateTime? Time { get; set; } = null;
+        public DateTime? Time { get; set; } = DateTime.UtcNow;
 
         public virtual Media? ImageCover { get; set; } = null;
         public virtual ICollection<User> Members { get; set; }

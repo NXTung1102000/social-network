@@ -16,6 +16,7 @@ namespace Model.Schema
         public string? Address { get; set; }
         public DateTime? Birthday { get; set; }
         public bool IsBlock { get; set; } = false;
+        public string? RefreshToken { get; set; } = null;
 
         public virtual Media? Avatar { get; set; } = null;
         public virtual Media? CoverPhoto { get; set; } = null;
@@ -35,7 +36,7 @@ namespace Model.Schema
         {
             modelBuilder.Entity<User>(entity =>
             {
-                
+
             });
         }
     }

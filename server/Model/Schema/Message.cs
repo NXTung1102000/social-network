@@ -9,8 +9,8 @@ namespace Model.Schema
     {
         public MessageTypeEnum MessageType { get; set; }
         public string Description { get; set; } = string.Empty;
-        public DateTime CreateAt { get; set; } = DateTime.Now;
-        public DateTime LastUpdateAt { get; set; } = DateTime.Now;
+        public DateTime CreateAt { get; set; } = DateTime.UtcNow;
+        public DateTime LastUpdateAt { get; set; } = DateTime.UtcNow;
 
         public virtual required Chat Chat { get; set; }
         public virtual required User Creator { get; set; }

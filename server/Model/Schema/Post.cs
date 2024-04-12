@@ -7,8 +7,8 @@ namespace Model.Schema
     public class Post : IdentityAbstractClass<Guid>
     {
         public string Description { get; set; } = string.Empty;
-        public DateTime CreateAt { get; set; } = DateTime.Now;
-        public DateTime LastUpdatedAt { get; set; } = DateTime.Now;
+        public DateTime CreateAt { get; set; } = DateTime.UtcNow;
+        public DateTime LastUpdatedAt { get; set; } = DateTime.UtcNow;
 
         public virtual required User Creator { get; set; }
         public virtual ICollection<Media> Medias { get; set; }

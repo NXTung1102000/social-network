@@ -10,7 +10,7 @@ namespace Model.Schema
         public Guid ChatId { get; set; }
         public Guid UserId { get; set; }
         public ChatRoleEnum Role { get; set; }
-        public string NickName { get; set; } = String.Empty;
+        public string NickName { get; set; } = string.Empty;
 
         public virtual required Chat Chat { get; set; }
         public virtual required User User { get; set; }
@@ -19,7 +19,7 @@ namespace Model.Schema
         {
             modelBuilder.Entity<ChatMember>(entity =>
             {
-
+                entity.HasKey(k => new { k.ChatId, k.UserId });
             });
         }
 
