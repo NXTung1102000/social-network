@@ -1,5 +1,5 @@
 ﻿
-namespace Helper.Validate
+namespace Helper
 {
     public class ValidateUser
     {
